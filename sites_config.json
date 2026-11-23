@@ -1,18 +1,5 @@
 [
     {
-        "name": "Archive.org (Jogos Clássicos & ROMs)",
-        "enabled": true,
-        "platform": "Retro / Multi",
-        "mode": "archive_api",
-        "base_url": "https://archive.org",
-        "search_url": "",
-        "item_selector": "",
-        "title_selector": "",
-        "link_selector": "",
-        "image_selector": "",
-        "download_link_pattern": "\\.(zip|7z|iso|chd|exe|rom)$"
-    },
-    {
         "name": "DLPSGame (Anti-Bot Scraper)",
         "enabled": true,
         "platform": "PlayStation / Switch / PC",

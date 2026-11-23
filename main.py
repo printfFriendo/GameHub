@@ -54,19 +54,6 @@ DEFAULT_HEADERS = {
 # Configuração inicial de sites (Criada automaticamente se sites_config.json não existir)
 DEFAULT_SITES_CONFIG = [
     {
-        "name": "Archive.org (Jogos Clássicos & ROMs)",
-        "enabled": True,
-        "platform": "Retro / Multi",
-        "mode": "archive_api",
-        "base_url": "https://archive.org",
-        "search_url": "",
-        "item_selector": "",
-        "title_selector": "",
-        "link_selector": "",
-        "image_selector": "",
-        "download_link_pattern": r"\.(zip|7z|iso|chd|exe|rom)$"
-    },
-    {
         "name": "DLPSGame (Anti-Bot Scraper)",
         "enabled": True,
         "platform": "PlayStation / Switch / PC",
@@ -157,45 +144,13 @@ class ModularScraperEngine:
     @staticmethod
     def search_single_site(site_cfg, query):
         mode = site_cfg.get("mode", "html_custom")
-        if mode == "archive_api":
-            return ModularScraperEngine._search_archive_org(site_cfg, query)
-        elif mode == "wp_rest_api":
+        if mode == "wp_rest_api":
             return ModularScraperEngine._search_wp_rest_api(site_cfg, query)
         elif mode in ["anti_bot_scraper", "dlpsgame", "romslab", "romsfun", "fitgirl"]:
             return ModularScraperEngine._search_anti_bot_scraper(site_cfg, query)
         else:
             return ModularScraperEngine._search_html_custom(site_cfg, query)
 
-    @staticmethod
-    def _search_archive_org(site_cfg, query):
-        """Busca na API pública do Internet Archive (Software / ROMs)."""
-        results = []
-        encoded_q = quote_plus(f"{query} AND mediatype:(software)")
-        api_url = (
-            f"https://archive.org/advancedsearch.php?q={encoded_q}"
-            f"&fl[]=identifier,title&rows=12&page=1&output=json"
-        )
-        try:
-            resp = requests.get(api_url, headers=DEFAULT_HEADERS, timeout=8)
-            resp.raise_for_status()
-            docs = resp.json().get("response", {}).get("docs", [])
-            for doc in docs:
-                ident = doc.get("identifier")
-                title = doc.get("title", ident)
-                if not ident:
-                    continue
-                results.append({
-                    "title": title,
-                    "platform": site_cfg.get("platform", "Retro"),
-                    "source_name": site_cfg.get("name", "Archive.org"),
-                    "cover_url": f"https://archive.org/services/img/{ident}",
-                    "page_url": f"https://archive.org/details/{ident}",
-                    "direct_download": f"https://archive.org/compress/{ident}",
-                    "download_pattern": site_cfg.get("download_link_pattern", "")
-                })
-        except Exception:
-            pass
-        return results
     @staticmethod
     def _search_wp_rest_api(site_cfg, query):
         """

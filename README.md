@@ -11,10 +11,9 @@
   * **ROMSLab** (Nintendo Switch, Switch 2, PC, PS5).
   * **ROMSFun** (ROMs retrô e bibliotecas clássicas: GBA, SNES, NES, PS1, PS2, etc.).
   * **FitGirl Repacks** (Repacks de PC) com extração em segundo plano das capas oficiais de cada título.
-  * **Archive.org** (Metadados e arquivos de preservação digital de jogos clássicos).
 * **🎯 Filtros Dinâmicos na Interface:**
   * Filtro por **Console / Plataforma** (ex: *Switch, PS4, PS5, PC, Retrô, etc.*).
-  * Filtro por **Site / Origem** (*DLPSGame, FitGirl, ROMSLab, ROMSFun, Archive.org*).
+  * Filtro por **Site / Origem** (*DLPSGame, FitGirl, ROMSLab, ROMSFun*).
   * Contador dinâmico de resultados em tempo real.
 * **📦 Classificador Inteligente de Links:**
   * Separação visual por tipo: *🎮 Jogo Base*, *🔄 Atualização / Update*, *🎁 DLC / Extra*, *🧲 Torrent / Magnet*, *🔗 Servidor / Mirror*.
