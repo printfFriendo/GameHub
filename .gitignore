@@ -1,0 +1,19 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller build artifacts e binários pesados
+build/
+dist/
+*.spec
+*.exe
+
+# Ambientes virtuais
+venv/
+env/
+.env
+
+# Configurações de IDEs
+.vscode/
+.idea/

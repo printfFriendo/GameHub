@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Archive.org (Jogos Clássicos & ROMs)",
+        "enabled": true,
+        "platform": "Retro / Multi",
+        "mode": "archive_api",
+        "base_url": "https://archive.org",
+        "search_url": "",
+        "item_selector": "",
+        "title_selector": "",
+        "link_selector": "",
+        "image_selector": "",
+        "download_link_pattern": "\\.(zip|7z|iso|chd|exe|rom)$"
+    },
+    {
+        "name": "DLPSGame (Anti-Bot Scraper)",
+        "enabled": true,
+        "platform": "PlayStation / Switch / PC",
+        "mode": "dlpsgame",
+        "base_url": "https://dlpsgame.com/",
+        "search_url": "https://dlpsgame.com/?s={query}",
+        "item_selector": "",
+        "title_selector": "",
+        "link_selector": "",
+        "image_selector": "",
+        "download_link_pattern": "(mega\\.nz|mediafire\\.com|drive\\.google\\.com|1fichier\\.com|gofile\\.io|qiwi|datanodes\\.to|filekeeper\\.net|pixeldrain\\.com|filecrypt\\.cc|downloadgameps3\\.(net|com)/archives/|\\.pkg|\\.zip|\\.7z|\\.rar|\\.nsp|\\.xci)"
+    },
+    {
+        "name": "ROMSLab (Anti-Bot Scraper)",
+        "enabled": true,
+        "platform": "Switch / PC / PS5",
+        "mode": "romslab",
+        "base_url": "https://romslab.com/",
+        "search_url": "https://romslab.com/?s={query}",
+        "item_selector": "",
+        "title_selector": "",
+        "link_selector": "",
+        "image_selector": "",
+        "download_link_pattern": "(mega\\.nz|mediafire\\.com|drive\\.google\\.com|1fichier\\.com|gofile\\.io|qiwi|datanodes\\.to|filekeeper\\.net|pixeldrain\\.com|filecrypt\\.cc|downloadgameps3\\.(net|com)/archives/|\\.pkg|\\.zip|\\.7z|\\.rar|\\.nsp|\\.xci)"
+    },
+    {
+        "name": "ROMSFun (ROMs & Retrô)",
+        "enabled": true,
+        "platform": "Multi-Console / Retrô",
+        "mode": "romsfun",
+        "base_url": "https://romsfun.com/roms/",
+        "search_url": "https://romsfun.com/browse-all-roms/?q={query}",
+        "item_selector": "",
+        "title_selector": "",
+        "link_selector": "",
+        "image_selector": "",
+        "download_link_pattern": "(romsfun\\.com|romsfast\\.com|mega\\.nz|mediafire\\.com|1fichier\\.com|drive\\.google\\.com|\\.zip|\\.7z|\\.iso|\\.rar|\\.rom|\\.nes|\\.sfc|\\.bin)"
+    },
+    {
+        "name": "FitGirl Repacks (PC Games)",
+        "enabled": true,
+        "platform": "PC / Repack",
+        "mode": "fitgirl",
+        "base_url": "https://fitgirl-repacks.site/",
+        "search_url": "https://fitgirl-repacks.site/?s={query}",
+        "item_selector": "",
+        "title_selector": "",
+        "link_selector": "",
+        "image_selector": "",
+        "download_link_pattern": "(magnet:\\?|1337x|rutor|tapochek|datanodes\\.to|fuckingfast\\.co|filekeeper\\.net|paste\\.fitgirl|gofile\\.io|pixeldrain\\.com|multiup|1fichier|mediafire|drive\\.google|\\.torrent|\\.rar|\\.bin|\\.zip)"
+    }
+]
